@@ -1,4 +1,21 @@
 <resources>
-    <string name="app_name">ManHuaWork</string>
+    <string name="app_name">MyMhDemo</string>
     <string name="action_settings">Settings</string>
+    <string name="login">立即登录</string>
+    <string name="reg">快速注册</string>
+
+
+    <!--左侧栏栏目-->
+    <string name="manhua_local">本地漫画</string>
+    <string name="manhua_history">历时观看</string>
+    <string name="manhua_download">下载记录</string>
+    <string name="manhua_user">个人中心</string>
+    <string name="manhua_message">我的消息</string>
+    <string name="manhua_vip">我的VIP</string>
+    <string name="manhua_wallet">我的钱包</string>
+    <string name="manhua_ticket">我的门票</string>
+    <string name="manhua_order">我的订单</string>
+    <string name="manhua_night">夜间模式</string>
+
+
 </resources>

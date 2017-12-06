@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:maxWidth="384.0dip"
+    android:scrollbars="none" >
+    <LinearLayout
+        android:id="@+id/drawer_container_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/sidebar_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="170.0dip"
+                android:layout_marginBottom="10.0dip" >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/user_center_bg"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:viewAspectRatio="1.75" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_marginTop="30.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/default_avatar"
+                    app:placeholderImageScaleType="centerCrop"
+                    />
+                <TextView
+                    android:layout_below="@id/user_avatar"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_marginLeft="26.0dip"
+                    android:textColor="#ffffff"
+                    android:textSize="16.0sp"
+                    android:text="@string/login"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:text="@string/reg"
+                    android:gravity="bottom"
+                    android:textSize="14.0sp"
+                    android:textColor="#ffffff"
+                    android:background="#00000000"/>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/local_manhua"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_local_manga"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="本地漫画" />
+
+        <TextView
+            android:id="@+id/manhua_history"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_history"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="历史观看" />
+
+        <TextView
+            android:id="@+id/manhua_download"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_download"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="下载记录" />
+
+        <TextView
+            android:id="@+id/manhua_user"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_home"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="个人中心" />
+
+        <TextView
+            android:id="@+id/manhua_message"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_comment"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="我的消息" />
+        <TextView
+            android:id="@+id/manhua_vip"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_vip"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="我的VIP" />
+        <TextView
+            android:id="@+id/manhua_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableLeft="@mipmap/ic_drawer_wallet"
+            android:gravity="center"
+            android:text="我的钱包" />
+        <TextView
+            android:id="@+id/manhua_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_ticket"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="我的门票" />
+        <TextView
+            android:id="@+id/manhua_order"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_order"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="我的订单" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            >
+            <TextView
+                android:id="@+id/manhua_night"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:drawableLeft="@mipmap/ic_drawer_night_mode"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="夜间模式" />
+
+            <ImageView
+                android:id="@+id/manhua_night_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginRight="20.0dip"
+                android:src="@mipmap/switch_off"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/manhua_setting"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@mipmap/ic_drawer_setting"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="设置" />
+
+    </LinearLayout>
+
+</ScrollView>
