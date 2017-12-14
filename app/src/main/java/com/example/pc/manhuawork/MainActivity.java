@@ -1,5 +1,6 @@
 package com.example.pc.manhuawork;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView manhua_night;
     private TextView manhua_setting;
     private ImageView switch_night;
+
+    //test
+    private ImageView ic_test;
 
     //FLAG
     private static boolean night_boolean = true;
@@ -136,6 +140,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"你点击了设置",Toast.LENGTH_LONG).show();
             }
         });
+
+        ic_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
     private void initUI(){
         leftMenu = (ImageView) findViewById(R.id.leftmenu);
@@ -154,6 +166,10 @@ public class MainActivity extends AppCompatActivity {
         manhua_night = findViewById(R.id.manhua_night);
         manhua_setting = findViewById(R.id.manhua_setting);
         switch_night= findViewById(R.id.manhua_night_switch);
+
+        //test
+        ic_test = findViewById(R.id.test_image);
+
     }
 
 }
