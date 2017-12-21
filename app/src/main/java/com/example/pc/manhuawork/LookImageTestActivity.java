@@ -14,6 +14,7 @@ import com.example.pc.utils.ManHuaSrc;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder;
 import com.facebook.drawee.controller.BaseControllerListener;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.image.ImageInfo;
 
 import me.relex.photodraweeview.OnPhotoTapListener;
@@ -25,7 +26,7 @@ import me.relex.photodraweeview.PhotoDraweeView;
  */
 
 public class LookImageTestActivity extends Activity {
-    private PhotoDraweeView mPhotoDraweeView;
+    private SimpleDraweeView mPhotoDraweeView;
     private String img_url;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,40 +53,16 @@ public class LookImageTestActivity extends Activity {
     }
 
     private void initView() {
-        mPhotoDraweeView = (PhotoDraweeView) findViewById(R.id.test_manhuaImage);
+        mPhotoDraweeView = (SimpleDraweeView) findViewById(R.id.test_manhuaImage);
     }
 
     private void initData() {
-        img_url = getIntent().getStringExtra("img_url");
-        if (!TextUtils.isEmpty(img_url)) {
-            PipelineDraweeControllerBuilder controller = Fresco.newDraweeControllerBuilder();
-            Uri uri = Uri.parse(ManHuaSrc.src1);
-            controller.setUri(uri);//设置图片url
-            controller.setOldController(mPhotoDraweeView.getController());
-            controller.setControllerListener(new BaseControllerListener<ImageInfo>() {
-                @Override
-                public void onFinalImageSet(String id, ImageInfo imageInfo, Animatable animatable) {
-                    super.onFinalImageSet(id, imageInfo, animatable);
-                    if (imageInfo == null || mPhotoDraweeView == null) {
-                        return;
-                    }
-                    mPhotoDraweeView.update(imageInfo.getWidth(), imageInfo.getHeight());
-                }
-            });
-            mPhotoDraweeView.setController(controller.build());
-        } else {
-            Toast.makeText(this, "图片获取失败", Toast.LENGTH_SHORT).show();
-        }
+        Uri uri = Uri.parse(ManHuaSrc.src1);
+        mPhotoDraweeView.setImageURI(uri);
     }
 
     private void initEvent() {
-        //添加点击事件
-        mPhotoDraweeView.setOnPhotoTapListener(new OnPhotoTapListener() {
-            @Override
-            public void onPhotoTap(View view, float x, float y) {
-                finish();
-            }
-        });
+
     }
 
 }
